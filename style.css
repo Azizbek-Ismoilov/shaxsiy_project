@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0a0f;
+    color: #e5e5e5;
+}
+
+/* Orqa fon animatsiya */
+.background {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #1c1c3c, #000);
+    animation: bg 14s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes bg {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(30deg); }
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 64px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #9fa8ff;
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    line-height: 1.7;
+    color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 30px;
+    border: 1px solid #666;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 10%;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* SKILLS */
+.skill {
+    margin-bottom: 25px;
+}
+
+.bar {
+    height: 10px;
+    background: #222;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    animation: load 2s ease;
+}
+
+.progress.html { width: 90%; background: #4facfe; }
+.progress.css  { width: 85%; background: #43e97b; }
+.progress.js   { width: 70%; background: #fbc531; }
+
+@keyframes load {
+    from { width: 0; }
+}
+
+/* TIMELINE */
+.timeline {
+    list-style: none;
+}
+
+.timeline li {
+    margin-bottom: 15px;
+    color: #cfcfcf;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
